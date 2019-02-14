@@ -31,6 +31,9 @@ $ wc -l `find . -type f -name "*.jsx" | sort -n`
 
 # count lines of code for jsx and css files in current folder
 $ wc -l `find . -type f -name "*.jsx" -or -name "*.css" | sort -n`
+
+# count lines of code for tsx and css files in src folder
+$ wc -l `find ./src -type f -name "*.tsx" -or -name "*.css" | sort -n`
 ```
 
 [count example](./count-example)
