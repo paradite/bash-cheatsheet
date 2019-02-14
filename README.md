@@ -2,13 +2,13 @@
 
 > Specific to OS X only
 
-## executable sh
+## make shell scripts executable
 
 ```bash
 $ chmod +x script.sh
 ```
 
-## sed
+## modify files using sed
 
 ```bash
 # substitute and print to stdout
@@ -23,7 +23,7 @@ $ sed -i '' -e 's/another/next/g' test-file.txt
 
 [sed example](./sed-example)
 
-## count lines of code
+## count lines of code for each individual files
 
 ```bash
 # count lines of code for jsx files in current folder
