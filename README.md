@@ -23,7 +23,7 @@ $ sed -i '' -e 's/another/next/g' test-file.txt
 
 [sed example](./sed-example)
 
-## count lines of code for each individual files
+## count lines of code for each individual file
 
 ```bash
 # count lines of code for jsx files in current folder
