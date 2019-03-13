@@ -8,6 +8,19 @@
 $ chmod +x script.sh
 ```
 
+## static http server
+
+```bash
+# python2
+$ python -m SimpleHTTPServer 8000
+
+# python3
+$ python3 -m http.server
+
+# alias
+alias http="python -m SimpleHTTPServer 8000"
+```
+
 ## modify files using sed
 
 ```bash
@@ -34,6 +47,9 @@ $ wc -l `find . -type f -name "*.jsx" -or -name "*.css" | sort -n`
 
 # count lines of code for tsx files in src folder
 $ wc -l `find ./src -type f -name "*.tsx" | sort -n`
+
+# alias
+alias wct=$'wc -l `find ./src -type f -name "*.tsx" | sort -n`'
 ```
 
 [count example](./count-example)
@@ -49,6 +65,10 @@ git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep
 
 # remove local branches that are not found on remote
 git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d
+
+#alias
+alias gp="git fetch --prune"
+alias grm=$'git branch -r | awk \'{print $1}\' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk \'{print $1}\' | xargs git branch -d'
 ```
 
 ## License
