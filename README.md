@@ -83,6 +83,11 @@ $ ~/Library/Android/sdk/tools/emulator -list-avds
 $ ~/Library/Android/sdk/tools/emulator -avd Pixel_2_API_27 &
 ```
 
+---
+
+## Other cheatsheets
+- [d3-cheatsheet](https://github.com/paradite/d3-cheatsheet)
+
 ## License
 
 MIT
