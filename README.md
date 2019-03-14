@@ -71,6 +71,18 @@ alias gp="git fetch --prune"
 alias grm=$'git branch -r | awk \'{print $1}\' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk \'{print $1}\' | xargs git branch -d'
 ```
 
+## Android emulator
+
+> https://stackoverflow.com/a/48729278/1472186
+
+```bash
+# list devices
+$ ~/Library/Android/sdk/tools/emulator -list-avds
+
+# run in background
+$ ~/Library/Android/sdk/tools/emulator -avd Pixel_2_API_27 &
+```
+
 ## License
 
 MIT
