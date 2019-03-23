@@ -76,11 +76,21 @@ alias grm=$'git branch -r | awk \'{print $1}\' | egrep -v -f /dev/fd/0 <(git bra
 > https://stackoverflow.com/a/48729278/1472186
 
 ```bash
-# list devices
+# list devices with identifiers
 $ ~/Library/Android/sdk/tools/emulator -list-avds
 
 # run in background
 $ ~/Library/Android/sdk/tools/emulator -avd Pixel_2_API_27 &
+```
+
+## iOS Simulator
+
+```bash
+# list devices with identifiers
+$ instruments -s devices
+
+# start Simulator
+$ open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/
 ```
 
 ## List open ports
