@@ -83,6 +83,12 @@ $ ~/Library/Android/sdk/tools/emulator -list-avds
 $ ~/Library/Android/sdk/tools/emulator -avd Pixel_2_API_27 &
 ```
 
+## List open ports
+
+```bash
+$ sudo lsof -iTCP -sTCP:LISTEN -n -P
+```
+
 ---
 
 ## Other cheatsheets
