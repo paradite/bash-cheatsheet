@@ -103,6 +103,7 @@ $ sudo lsof -iTCP -sTCP:LISTEN -n -P
 
 ## Other cheatsheets
 - [d3-cheatsheet](https://github.com/paradite/d3-cheatsheet)
+- [pure-bash-bible](https://github.com/dylanaraps/pure-bash-bible)
 
 ## License
 
