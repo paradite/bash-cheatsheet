@@ -83,10 +83,10 @@ git checkout origin/master filename
 
 ```bash
 # list devices with identifiers
-$ ~/Library/Android/sdk/tools/emulator -list-avds
+$ ~/Library/Android/sdk/emulator/emulator -list-avds
 
 # run in background
-$ ~/Library/Android/sdk/tools/emulator -avd Pixel_2_API_27 &
+$ ~/Library/Android/sdk/emulator/emulator -avd Pixel_2_API_28 &
 ```
 
 ## iOS Simulator
