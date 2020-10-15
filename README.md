@@ -21,6 +21,17 @@ $ python3 -m http.server
 alias http="python -m SimpleHTTPServer 8000"
 ```
 
+## nginx
+
+```bash
+# update the config
+$ open /usr/local/etc/nginx/
+# run
+$ nginx
+# stop
+$ nginx -s stop
+```
+
 ## modify files using sed
 
 ```bash
