@@ -114,6 +114,7 @@ $ open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/
 
 ```bash
 $ sudo lsof -iTCP -sTCP:LISTEN -n -P
+$ sudo lsof -i -P -n | grep LISTEN
 ```
 
 ## List tar/zip file contents
