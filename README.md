@@ -123,6 +123,16 @@ $ sudo lsof -i -P -n | grep LISTEN
 $ tar -tvf archive.tar
 ```
 
+## Remove node_modules
+
+```bash
+# check
+$ find . -name "node_modules" -type d -prune | xargs du -chs
+
+# remove
+$ find . -name "node_modules" -type d -prune -exec rm -rf '{}' +
+```
+
 ---
 
 ## Other cheatsheets
