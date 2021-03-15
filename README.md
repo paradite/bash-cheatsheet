@@ -2,6 +2,10 @@
 
 > Specific to OS X only
 
+# TOC
+
+- [Git](#git)
+
 ## make shell scripts executable
 
 ```bash
@@ -65,6 +69,8 @@ alias wct=$'wc -l `find ./src -type f -name "*.tsx" | sort -n`'
 
 [count example](./count-example)
 
+# Git
+
 ## remove old merged git branches that are no longer in remote
 
 ```bash
@@ -82,11 +88,20 @@ alias gp="git fetch --prune"
 alias grm=$'git branch -r | awk \'{print $1}\' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk \'{print $1}\' | xargs git branch -d'
 ```
 
-## git revert to remote origin master
+## Revert to remote origin master
 
 ```bash
 git checkout origin/master filename
 ```
+
+## Sort files by git modified date
+
+> https://serverfault.com/questions/401437/how-to-retrieve-the-last-modification-date-of-all-files-in-a-git-repository#comment1118135_401450
+
+```bash
+git ls-tree -r --name-only HEAD | while read filename; do   echo "$(git log -1 --format="%ai" -- $filename) $filename"; done | sort
+```
+
 
 ## Android emulator
 
