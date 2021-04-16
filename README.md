@@ -4,6 +4,7 @@
 
 # TOC
 
+- [nginx](#nginx)
 - [Git](#git)
 
 ## make shell scripts executable
@@ -28,12 +29,16 @@ alias http="python -m SimpleHTTPServer 8000"
 ## nginx
 
 ```bash
+# check current config and print config path
+$ nginx -t
 # update the config
 $ open /usr/local/etc/nginx/
 # run
 $ nginx
 # stop
 $ nginx -s stop
+# restart
+$ nginx -s reload
 ```
 
 ## modify files using sed
@@ -69,9 +74,9 @@ alias wct=$'wc -l `find ./src -type f -name "*.tsx" | sort -n`'
 
 [count example](./count-example)
 
-# Git
+## Git
 
-## remove old merged git branches that are no longer in remote
+### remove old merged git branches that are no longer in remote
 
 ```bash
 # prune remote-tracking branches no longer on remote
@@ -88,13 +93,13 @@ alias gp="git fetch --prune"
 alias grm=$'git branch -r | awk \'{print $1}\' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk \'{print $1}\' | xargs git branch -d'
 ```
 
-## Revert to remote origin master
+### Revert to remote origin master
 
 ```bash
 git checkout origin/master filename
 ```
 
-## Sort files by git modified date
+### Sort files by git modified date
 
 > https://serverfault.com/questions/401437/how-to-retrieve-the-last-modification-date-of-all-files-in-a-git-repository#comment1118135_401450
 
