@@ -118,6 +118,8 @@ $ ~/Library/Android/sdk/emulator/emulator -list-avds
 
 # run in background
 $ ~/Library/Android/sdk/emulator/emulator -avd Pixel_2_API_28 &
+
+$ alias android="~/Library/Android/sdk/emulator/emulator -avd Pixel_2_API_28 &"
 ```
 
 ## iOS Simulator
@@ -128,6 +130,8 @@ $ instruments -s devices
 
 # start Simulator
 $ open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/
+
+$ alias ios="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/"
 ```
 
 ## List open ports
