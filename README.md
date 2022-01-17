@@ -31,12 +31,16 @@ alias http="python -m SimpleHTTPServer 8000"
 ```bash
 # check current config and print config path
 $ nginx -t
+
 # update the config
 $ open /usr/local/etc/nginx/
+
 # run
 $ nginx
+
 # stop
 $ nginx -s stop
+
 # restart
 $ nginx -s reload
 ```
@@ -80,13 +84,13 @@ alias wct=$'wc -l `find ./src -type f -name "*.tsx" | sort -n`'
 
 ```bash
 # prune remote-tracking branches no longer on remote
-git fetch --prune
+$ git fetch --prune
 
 # print local branches that are not found on remote
-git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}'
+$ git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}'
 
 # remove local branches that are not found on remote
-git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d
+$ git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d
 
 #alias
 alias gp="git fetch --prune"
@@ -96,7 +100,7 @@ alias grm=$'git branch -r | awk \'{print $1}\' | egrep -v -f /dev/fd/0 <(git bra
 ### Revert to remote origin master
 
 ```bash
-git checkout origin/master filename
+$ git checkout origin/master filename
 ```
 
 ### Sort files by git modified date
@@ -104,7 +108,7 @@ git checkout origin/master filename
 > https://serverfault.com/questions/401437/how-to-retrieve-the-last-modification-date-of-all-files-in-a-git-repository#comment1118135_401450
 
 ```bash
-git ls-tree -r --name-only HEAD | while read filename; do   echo "$(git log -1 --format="%ai" -- $filename) $filename"; done | sort
+$ git ls-tree -r --name-only HEAD | while read filename; do   echo "$(git log -1 --format="%ai" -- $filename) $filename"; done | sort
 ```
 
 
@@ -155,6 +159,22 @@ $ find . -name "node_modules" -type d -prune | xargs du -chs
 
 # remove
 $ find . -name "node_modules" -type d -prune -exec rm -rf '{}' +
+```
+
+## Remove .DS_Store
+
+```bash
+$ find . -name ".DS_Store" -delete
+```
+
+## Spotlight indexing
+
+```bash
+# turn off
+$ sudo mdutil -a -i off
+
+# turn on
+$ sudo mdutil -a -i on
 ```
 
 ---
