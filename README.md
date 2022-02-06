@@ -72,6 +72,9 @@ $ wc -l `find . -type f -name "*.jsx" -or -name "*.css" | sort -n`
 # count lines of code for tsx files in src folder
 $ wc -l `find ./src -type f -name "*.tsx" | sort -n`
 
+# count tsx or ts files, excluding *.test.ts and .test.tsx, sort by LOC
+$ wc -l `find ./src -type f '(' -name "*.tsx" -or -name "*.ts" ')' -not '(' -name "*.test.ts" -or -name ".test.tsx" ')'` | sort -n
+
 # alias
 alias wct=$'wc -l `find ./src -type f -name "*.tsx" | sort -n`'
 ```
