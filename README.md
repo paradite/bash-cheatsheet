@@ -180,6 +180,14 @@ $ sudo mdutil -a -i off
 $ sudo mdutil -a -i on
 ```
 
+## virtualenv
+
+```bash
+$ virtualenv venv
+$ source venv/bin/activate
+$ deactivate
+```
+
 ---
 
 ## Other cheatsheets
