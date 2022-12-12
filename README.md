@@ -10,6 +10,8 @@
 ## kill gpg-agent
 
 ```bash
+$ killall gpg-agent
+# or
 $ gpgconf --kill gpg-agent
 ```
 
