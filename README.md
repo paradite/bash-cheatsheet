@@ -7,6 +7,12 @@
 - [nginx](#nginx)
 - [Git](#git)
 
+## kill gpg-agent
+
+```bash
+$ gpgconf --kill gpg-agent
+```
+
 ## make shell scripts executable
 
 ```bash
